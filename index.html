@@ -5,6 +5,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="dist/main.css"/>
+        <script src="dist/all.js" defer>
+        </script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,300;1,700&display=swap" rel="stylesheet">
@@ -21,7 +23,18 @@
                     <p>
                         Infinitely scalable, feature-rich and cloud-native data management and protection for modern and legacy infrastructures and SaaS platforms, managed via a single app with no hardware required.
                     </p>
-                    <button>Button</button>
+                    <button data-modal-target="#modal" class="btn">Button</button>
+                    <div class="modal" id="modal">
+                        <div class="modal-header">
+                            <div class="title">Alert!</div>
+                            <button data-close-button class="button-close">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <p>You have clicked <span class='counter'>0</span> times to related button.</p>
+                            <button data-reset-button class="res">Reset</button>
+                        </div>
+                    </div>
+                    <div id="overlay"></div>
                 </div>
             </section>
         </div>

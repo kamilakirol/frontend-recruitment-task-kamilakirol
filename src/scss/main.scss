@@ -19,7 +19,7 @@ body {
     margin-bottom: 96px;
 }
 
-.picture img{
+.picture img {
     width: 505px;
     height: 330px;
     margin-right: 95px;
@@ -32,14 +32,14 @@ body {
 
 @media screen and (max-width: 1000px) {
     .main {
-        .info{
+        .info {
             flex-direction: column;
             width: 100%;
             margin-top: 56px;
             margin-bottom: 0;
         }
     
-        .picture{
+        .picture {
             max-width: 505px;
         
             img {
@@ -49,13 +49,13 @@ body {
             }
         }
     
-        .content{
+        .content {
             margin-top: 16px;
             max-width: 380px;
             margin-left: 16px;
             margin-right: 16px;
 
-            p{
+            p {
                 width: auto;
             }
         }
@@ -66,7 +66,7 @@ body {
 
 @media screen and (max-width: 500px) {
     .main {
-        .info{
+        .info {
             margin-top: 0;
         }
     }
@@ -90,7 +90,7 @@ body {
     margin-top: 24px;
 }
 
-.content button {
+.btn {
     background: #E4C1AE;
     border-radius: 32px;
     width: 128px;
@@ -99,5 +99,97 @@ body {
     border: 0;
     font-weight: 700;
 }
+
+.res {
+    display: none;
+    background: #E4C1AE;
+    border-radius: 32px;
+    width: 128px;
+    height: 48px;
+    color: #FFFFFF;
+    border: 0;
+    font-weight: 700;
+}
+
+.res.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    z-index: 10;
+    background-color: #FFFFFF;
+    width: 920px;
+    height: 210px;
+    max-width: 80%;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+    
+    padding-left: 95px;
+    padding-right: 46px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header .title {
+    margin-top: 56px;
+    font-weight: 700;
+    font-size: 42px;
+}
+
+.modal-header .button-close {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-weight: 400;
+    font-size: 26px;
+    padding: 0;
+}
+
+.modal-body {
+    padding: 24px 95px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.modal-body p {
+    margin:0;
+
+        .counter {
+            font-weight: bold;
+             }
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba($color: #121212, $alpha: 0.5);
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity:1;
+    pointer-events: all;
+}
+
 
 
